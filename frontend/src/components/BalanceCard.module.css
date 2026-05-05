@@ -1,0 +1,133 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0057FF 0%, #0040CC 60%, #003AB5 100%);
+  border-radius: var(--radius-xl);
+  padding: 32px 36px;
+  color: white;
+  box-shadow: var(--shadow-primary), 0 16px 40px rgba(0,87,255,0.3);
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.cardLoading {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 32px 36px;
+  border-radius: var(--radius-xl);
+}
+
+/* Decorative background circles */
+.circle1, .circle2 {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  pointer-events: none;
+}
+.circle1 {
+  width: 260px;
+  height: 260px;
+  top: -80px;
+  right: -60px;
+}
+.circle2 {
+  width: 160px;
+  height: 160px;
+  bottom: -60px;
+  right: 120px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+}
+
+.liveDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(0,212,170,0.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.balance {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-top: 10px;
+  line-height: 1;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 20px 0;
+}
+
+.bottomRow {
+  display: flex;
+  gap: 32px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.infoLabel {
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+}
+
+.infoValue {
+  font-size: 0.875rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.walletId {
+  font-size: 0.8rem;
+  opacity: 0.65;
+}
+
+.skRow {
+  border-radius: var(--radius-sm);
+}
+
+.copyBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: inherit;
+  font: inherit;
+}
+.copyBtn:hover { background: rgba(255,255,255,0.15); }
+.copyIcon { font-size: 11px; opacity: 0.7; }
